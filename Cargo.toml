@@ -1,5 +1,7 @@
 [package]
 name = "tokio-simple-scheduler"
+description = "A very simple scheduler for Tokio"
+license = "MIT"
 version = "0.1.0"
 edition = "2021"
 
