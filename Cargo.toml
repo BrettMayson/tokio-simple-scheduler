@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 cron = "0.11.0"
 chrono = "0.4.22"
-tokio = { version = "1.20.1", features = ["time", "macros"] }
+tokio = { version = "1.20.1", features = ["time", "macros", "rt"] }
 
 [dev-dependencies]
 tokio = { version = "1.20.1", features = ["rt", "time", "macros", "rt-multi-thread"] }
