@@ -1,4 +1,4 @@
-use std::time::Duration;
+use std::{time::Duration, ops::Add};
 
 use crate::job::Job;
 
@@ -36,7 +36,8 @@ impl Scheduler {
     pub async fn start(&mut self) {
         loop {
             if let Some((jobs, duration)) = self.until() {
-                tokio::time::sleep(duration).await;
+                // a hack to make sure we don't fire a job a few microseconds early
+                tokio::time::sleep(duration.add(std::time::Duration::from_micros(700))).await;
                 for job in jobs {
                     job.run().await;
                 }

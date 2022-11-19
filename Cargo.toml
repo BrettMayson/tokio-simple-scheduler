@@ -2,14 +2,14 @@
 name = "tokio-simple-scheduler"
 description = "A very simple scheduler for Tokio"
 license = "MIT"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 repository = "https://github.com/brettmayson/tokio-simple-scheduler"
 
 [dependencies]
-cron = "0.11.0"
-chrono = "0.4.22"
-tokio = { version = "1.20.1", features = ["time", "macros", "rt"] }
+cron = "0.12.0"
+chrono = "0.4.23"
+tokio = { version = "1.21.2", features = ["time", "macros", "rt"] }
 
 [dev-dependencies]
-tokio = { version = "1.20.1", features = ["rt", "time", "macros", "rt-multi-thread"] }
+tokio = { version = "1.21.2", features = ["rt", "time", "macros", "rt-multi-thread"] }
